@@ -3,18 +3,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>responsive-table-mobile-desktop-with-css | Tabela responsiva mobile e desktop com css </title>
+		<link rel="stylesheet" type="text/css" href="node_modules/bulma/css/bulma.css">
 		<style type="text/css">
 		@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
-
-		body {
-		background-color: #6d695c;
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAAAAAAAAACDY+nAAAAAA3RSTlMmDQBzGIDBAAAAG0lEQVR42uXIIQEAAADCMHj/0NdkQMws0HEeAqvwAUGJthrXAAAAAElFTkSuQmCC);
-		font-size: 100%;
-		color: #333;
-		font-family: Lato, Arial, sans-serif;
-		padding: 0;
-		margin: 0;
-		}
 
 		main {
 		display: block;
@@ -173,106 +164,113 @@
 		<header>
 			<nav>
 				<ul>
-					<li>Eu sou um menu.</li>
+					<li></li>
 				</ul>
 			</nav>
 		</header>		
-		<section>	
-			<h1>Responsive Table That Also Scrolls if Necessary</h1>
-			<div role="region" aria-labelledby="Cap1" tabindex="0">
-				<table id="Books">
-				<caption id="Cap1">Books I May or May Not Have Read</caption>
-				<tr>
-				<th>Author</th>
-				<th>Title</th>
-				<th>Year</th>
-				<th>ISBN-13</th>
-				<th>ISBN-10</th>
-				</tr>
-				<tr>
-				<td>Miguel De Cervantes</td>
-				<td>The Ingenious Gentleman Don Quixote of La Mancha</td>
-				<td>1605</td>
-				<td>9783125798502</td>
-				<td>3125798507</td>
-				</tr>
-				<tr>
-				<td>Mary Shelley</td>
-				<td>Frankenstein; or, The Modern Prometheus</td>
-				<td>1818</td>
-				<td>9781530278442</td>
-				<td>1530278449</td>
-				</tr>
-				<tr>
-				<td>Herman Melville</td>
-				<td>Moby-Dick; or, The Whale</td>
-				<td>1851</td>
-				<td>9781530697908</td>
-				<td>1530697905</td>
-				</tr>
-				<tr>
-				<td>Emma Dorothy Eliza Nevitte Southworth</td>
-				<td>The Hidden Hand</td>
-				<td>1888</td>
-				<td>9780813512969</td>
-				<td>0813512964</td>
-				</tr>
-				<tr>
-				<td>F. Scott Fitzgerald</td>
-				<td>The Great Gatsby</td>
-				<td>1925</td>
-				<td>9780743273565</td>
-				<td>0743273567</td>
-				</tr>
-				<tr>
-				<td>George Orwell</td>
-				<td>Nineteen Eighty-Four</td>
-				<td>1948</td>
-				<td>9780451524935</td>
-				<td>0451524934</td>
-				</tr>
-				</table>
+		<section>
+			<div class="container">
+				<div class="notification">
+					<h1>Tabela responsiva que também faz rolagem se necessário</h1>
+					<h1>Responsive Table That Also Scrolls if Necessary</h1>
+					<div role="region" aria-labelledby="Cap1" tabindex="0">
+						<table id="Books">
+						<caption id="Cap1">Livros que eu posso ou não ter lido / Books I May or May Not Have Read</caption>
+						<tr>
+						<th>Autor</th>
+						<th>Titulo</th>
+						<th>Ano</th>
+						<th>ISBN-13</th>
+						<th>ISBN-10</th>
+						</tr>
+						<tr>
+						<td>Miguel De Cervantes</td>
+						<td>The Ingenious Gentleman Don Quixote of La Mancha</td>
+						<td>1605</td>
+						<td>9783125798502</td>
+						<td>3125798507</td>
+						</tr>
+						<tr>
+						<td>Mary Shelley</td>
+						<td>Frankenstein; or, The Modern Prometheus</td>
+						<td>1818</td>
+						<td>9781530278442</td>
+						<td>1530278449</td>
+						</tr>
+						<tr>
+						<td>Herman Melville</td>
+						<td>Moby-Dick; or, The Whale</td>
+						<td>1851</td>
+						<td>9781530697908</td>
+						<td>1530697905</td>
+						</tr>
+						<tr>
+						<td>Emma Dorothy Eliza Nevitte Southworth</td>
+						<td>The Hidden Hand</td>
+						<td>1888</td>
+						<td>9780813512969</td>
+						<td>0813512964</td>
+						</tr>
+						<tr>
+						<td>F. Scott Fitzgerald</td>
+						<td>The Great Gatsby</td>
+						<td>1925</td>
+						<td>9780743273565</td>
+						<td>0743273567</td>
+						</tr>
+						<tr>
+						<td>George Orwell</td>
+						<td>Nineteen Eighty-Four</td>
+						<td>1948</td>
+						<td>9780451524935</td>
+						<td>0451524934</td>
+						</tr>
+						<tr>
+						<td>João da Silva</td>
+						<td>Eighty-Two</td>
+						<td>1923</td>
+						<td>9780351524915</td>
+						<td>0251524931</td>
+						</tr>
+						</table>
+					</div>
+					<p>
+					Note that this is an <em>accessible</em> (keyboard and screen reader) responsive (width and print) table. You can <a href="http://adrianroselli.com/2017/11/a-responsive-accessible-table.html">read everything that went into the code in the tutorial</a> (so you can make your own).
+					</p>
+				</div>
 			</div>
-			<p>
-			Note that this is an <em>accessible</em> (keyboard and screen reader) responsive (width and print) table. You can <a href="http://adrianroselli.com/2017/11/a-responsive-accessible-table.html">read everything that went into the code in the tutorial</a> (so you can make your own).
-			</p>
 		</section>
-		<aside>
-			<h2>About section</h2>
-			<p>An honor, a dignity, a word and a retirement of character are great pillars and great patrimony of a man. And the only guardian of these values is this man himself.</p>
-		</aside>
-		<footer>
-			<p>Copyright 2017 Yuri Salgado</p>
-		</footer>
 		<script type="text/javascript">
 		function ResponsiveCellHeaders(elmID) {
-		try {
-		var THarray = [];
-		var table = document.getElementById(elmID);
-		var ths = table.getElementsByTagName("th");
-		for (var i = 0; i < ths.length; i++) {
-		var headingText = ths[i].innerHTML;
-		THarray.push(headingText);
-		}
-		var styleElm = document.createElement("style"),
-		styleSheet;
-		document.head.appendChild(styleElm);
-		styleSheet = styleElm.sheet;
-		for (var i = 0; i < THarray.length; i++) {
-		styleSheet.insertRule(
-		"#" +
-		elmID +
-		" td:nth-child(" +
-		(i + 1) +
-		')::before {content:"' +
-		THarray[i] +
-		': ";}',
-		styleSheet.cssRules.length
-		);
-		}
-		} catch (e) {
-		console.log("ResponsiveCellHeaders(): " + e);
-		}
+			try {
+				var THarray = [];
+				var table = document.getElementById(elmID);
+				var ths = table.getElementsByTagName("th");
+				for (var i = 0; i < ths.length; i++) {
+					var headingText = ths[i].innerHTML;
+					THarray.push(headingText);
+				}
+				var styleElm = document.createElement("style"),
+					styleSheet;
+
+				document.head.appendChild(styleElm);
+				styleSheet = styleElm.sheet;
+				
+				for (var i = 0; i < THarray.length; i++) {
+					styleSheet.insertRule(
+						"#" +
+						elmID +
+						" td:nth-child(" +
+						(i + 1) +
+						')::before {content:"' +
+						THarray[i] +
+						': ";}',
+						styleSheet.cssRules.length
+					);
+				}
+			} catch (e) {
+				console.log("ResponsiveCellHeaders(): " + e);
+			}
 		}
 		ResponsiveCellHeaders("Books");
 
