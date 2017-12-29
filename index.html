@@ -168,7 +168,7 @@
 		<header><!-- --></header>		
 		<section>
 			<div class="container">
-				<div role="region" aria-labelledby="Cap1" tabindex="0">
+				<div id="scroller-test" role="region" aria-labelledby="Cap1" tabindex="0">
 					<table id="books">
 						<!-- <caption id="Cap1">Livros que eu posso ou não ter lido / Books I May or May Not Have Read</caption> -->
 						<tr>
@@ -296,6 +296,19 @@
 		}
 		
 		addBooks(10);
+
+		var listElm = document.querySelector('#scroller-test');
+		// Detect when scrolled to bottom.
+		listElm.addEventListener('scroll', function() {
+			if (listElm.scrollTop + listElm.clientHeight >= listElm.scrollHeight) {
+				console.log("limit down");
+				addBooks(5);
+			} else if (listElm.scrollTop + listElm.clientHeight == listElm.clientHeight) {
+				console.log("limit up");
+			} else {
+				console.log("neutral");
+			}
+		});
 
 		// virtualize load
 		// responsive
