@@ -13,6 +13,7 @@ ideas
 - auto height by container ☐
 - receive json data ☐
 - formatter moment js ☐
+- fixed header ☐
 - configure width columns ☐
 
 others
