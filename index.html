@@ -273,18 +273,19 @@
 			return { author: authors[random], title: titles[random], year: 1900+random, X10: 07451523273567+random, X13: 05635152273567+random };
 		}
 		
-		function addBooks(quantity) {
+		function addBooks(quantity, directionScroll) {
 			var i;
 				table = document.getElementById("books");
 
 			for (i = 0; i < quantity; i++) {
 				var book = generateBook();
-				insertBook(book,table);
+				insertBook(book,table,directionScroll);
 			}
 		}
 		
-		function insertBook(book, table) {
-			var row = table.insertRow(table.rows.length),
+		function insertBook(book, table, directionScroll) {
+			var indexInsertRow = directionScroll === 'down' ? table.rows.length : 1,  
+				row = table.insertRow(indexInsertRow),
 				cell,
 				count = 0;
 		
@@ -295,16 +296,33 @@
 			}
 		}
 		
-		addBooks(10);
+		addBooks(10, 'down');
+
+		function removeBooks(quantity, directionScroll) {
+			var i;
+				table = document.getElementById("books");
+
+			if (directionScroll === 'down') {
+				for (i = 1; i < quantity+1; i++) {
+					table.deleteRow(i);
+				}
+			} else if (directionScroll === 'up') {
+				var totalRows = table.rows.length-1;
+				for (i = 0; i < quantity; i++) {
+					table.deleteRow(totalRows - i);
+				}
+			}
+		}
 
 		var listElm = document.querySelector('#scroller-test');
 		// Detect when scrolled to bottom.
 		listElm.addEventListener('scroll', function() {
 			if (listElm.scrollTop + listElm.clientHeight >= listElm.scrollHeight) {
-				console.log("limit down");
-				addBooks(5);
+				addBooks(10, 'down');
+				removeBooks(10, 'down');
 			} else if (listElm.scrollTop + listElm.clientHeight == listElm.clientHeight) {
-				console.log("limit up");
+				removeBooks(10, 'up');
+				addBooks(10, 'up');				
 			} else {
 				console.log("neutral");
 			}
