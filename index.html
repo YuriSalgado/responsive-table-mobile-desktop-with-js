@@ -67,10 +67,6 @@
 		text-align: right;
 		}
 
-		div {
-		overflow: auto;
-		}
-
 		@media screen and (max-width: 37em), print and (max-width: 5in) {
 		table,
 		tr,
@@ -145,17 +141,17 @@
 		}
 
 		@media print and (max-width: 5in) {
-		caption {
-		color: #000;
-		background-color: #fff;
-		border-bottom: 1pt solid #000;
-		}
-		table {
-		page-break-inside: auto;
-		}
-		tr {
-		page-break-inside: avoid;
-		}
+			caption {
+			color: #000;
+			background-color: #fff;
+			border-bottom: 1pt solid #000;
+			}
+			table {
+			page-break-inside: auto;
+			}
+			tr {
+			page-break-inside: avoid;
+			}
 		}
 
 		#scroller-test {
@@ -171,7 +167,7 @@
 		    /* head takes the height it requires, 
 		    and it's not scaled when table is resized */
 		    flex: 0 0 auto;
-		    width: calc(100% - 0.9em);
+		    width: calc(100% - 1.05em);
 		}
 		table tbody {
 		    /* body takes all the remaining available space */
@@ -185,6 +181,9 @@
 		table thead, table tbody tr {
 		    display: table;
 		    table-layout: fixed;
+		}
+		table thead th, table tbody td {
+			border: solid 1px #000000;
 		}
 
 		</style>
